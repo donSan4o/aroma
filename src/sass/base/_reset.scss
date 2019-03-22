@@ -1,0 +1,144 @@
+/* Reset CSS */
+*{-webkit-text-size-adjust:none}
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video, main{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main{display: block;}
+html{
+	height:100%;
+	-webkit-text-size-adjust: none;
+}
+* {
+	box-sizing: border-box;
+}
+body{
+	height:100%;
+	position:relative;
+	background: $base-background-color;
+	font: #{$base-font-size}/#{$base-line-height} $base-font-family;
+	color: $base-text-color;
+	min-width: $base-min-width;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+ul{list-style: none;}
+blockquote, q{quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+a:focus {
+	outline: none;
+}
+// adaptive images
+img {
+	max-width: 100%;
+	height: auto;
+}
+table{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+input, select, textarea{vertical-align: top;}
+textarea{overflow: auto;}
+select::-ms-expand {display: none;}
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {font-size: 0;}
+input:focus::-o-placeholder,
+textarea:focus::-o-placeholder {font-size: 0;}
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder {font-size: 0;}
+input:focus::-ms-placeholder,
+textarea:focus::-ms-placeholder {font-size: 0;}
+.show {
+	&.fader {
+		display: block;	
+	}
+}
+.w-100 {
+	width: 100%;
+}
+.h-100 {
+	height: 100%;
+}
+.w-230 {
+	width: 230px;
+}
+.w-270 {
+	width: 270px !important;
+}
+.d-flex {
+	display: flex;
+}
+.flex-column {
+	flex-direction: column;
+}
+.align-items-center {
+	align-items: center;
+}
+.justify-content-center {
+	justify-content: center;
+}
+.justify-content-between {
+	justify-content: space-between;
+}
+.text-center {
+	text-align: center;
+}
+.text-right {
+	text-align: right;
+}
+.h1 {
+	font-family: 'Montserrat';
+	font-size: 28px;
+	line-height: 40px;
+	font-weight: bold;
+}
+
+.p-8 {
+	padding: $indent/8;
+}
+
+.p-16 {
+	padding: $indent/16;
+}
+
+.pt-1 {
+	padding-top: $indent/1;
+}
+.pt-2 {
+	padding-top: $indent/2;
+}
+
+.m-auto {
+	margin: 0 auto;
+}
+// margin-bottom
+
+.mb-2 {
+	margin-bottom: $indent/2;
+}
+.mb-4 {
+	margin-bottom: $indent/4;
+}
+.mb-8 {
+	margin-bottom: $indent/8;
+}
+.mb-16 {
+	margin-bottom: $indent/16;
+}
+// margin-right 
+.mr-8 {
+	margin-right: $indent/8;
+}
+.mr-16 {
+	margin-right: $indent/16;
+}

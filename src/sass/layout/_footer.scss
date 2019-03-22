@@ -1,0 +1,35 @@
+.footer {
+    background: #E6E6E6;
+    min-height: 70px;
+    padding-top: $indent/4;
+    padding-bottom: $indent/2;
+    .container {
+        div {
+            h2 {
+                margin-bottom: $indent/8
+            }  
+            &.socials {
+                li {
+                    margin-right: $indent/16;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+            &.contacts,
+            &.service {
+                li {
+                    display: flex;
+                    margin-bottom: $indent/16;
+                    i {
+                        line-height: 26px;
+                        margin-right: 10px;
+                    }
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

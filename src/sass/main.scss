@@ -1,0 +1,350 @@
+@charset "utf-8";
+// Vendors
+// Utils
+@import "utils/variables";
+@import "utils/mixins";
+@import "utils/functions";
+// Base
+@import "base/reset";
+@import "base/icons";
+@import "base/fonts";
+@import "base/typography";
+@import "base/buttons";
+// Layout
+@import "layout/header";
+@import "layout/forms";
+@import "layout/footer";
+
+.hide-mobile {
+	@media (max-width: 769px) {
+		display: none !important;
+	}
+}
+.mobile-only {
+	display: none;
+	@media (max-width: 769px) {
+		display: block;
+	}
+}
+.container {
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+	@media(max-width: 768px) {
+		max-width: 630px;
+	}
+}
+.fader {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 98;
+}
+#content {
+	margin-top: $indent/4;	
+}
+.what-we-offer {
+	img {
+		width: $indent/4;
+		height: $indent/4;
+		margin-bottom: $indent/8;
+	}
+	p {
+		font-size: 20px;
+		line-height: 36px;
+	}
+}
+.gift-block {
+	.container {
+		.left-box {
+			width: 270px;
+			i {
+				font-size: 20px;
+			}
+		}
+		.right-box {
+			ul {
+				@include box-shadow;
+				flex-shrink: 0;
+				li {
+					height: 54px;
+					border-bottom: 1px solid $grey;
+					&:last-child {
+						border-bottom: 0;
+						height: auto;
+					}
+					b {
+						margin-right: 10px;
+					}
+				}
+			}
+		}
+	}
+}
+.brand-block {
+	.container {
+		.title-block {
+			width: 270px;
+			font-size: 20px;
+			margin-bottom: 100px;
+		}
+		.left-box {
+			max-width: 385px;
+			width: 100%;
+			margin-right: 60px;
+			flex-shrink: 0;
+			padding-bottom: 60px;
+			.brand-slider {
+				max-width: 270px;
+				width: 100%;
+				position: relative;
+				.swiper-container {
+					height: 495px;
+				}
+				.swiper-pagination {
+					right: -90px;
+					top: 0;
+					display: flex;
+					flex-direction: column;
+					span {
+						font-size: 28px;
+						line-height: 40px;
+						background: 0;
+						width: auto;
+						height: auto;
+						font-family: 'Montserrat';
+						font-weight: bold;
+						margin-bottom: 20px;
+					}
+				}
+				.swiper-button-prev,
+				.swiper-button-next {
+					width: 20px;
+					height: 20px;
+					top: -40px;
+					left: 0;
+					right: 0;
+					margin: 0 auto;
+					background: url(../images/icon_10_7.svg) no-repeat;
+					background-size: cover;
+				}
+				.swiper-button-next {
+					background: url(../images/icon_10_8.svg) no-repeat;
+					top: auto;
+					bottom: -60px;
+				}
+			}
+		}
+		.right-box {
+			padding-left: 175px;
+			border-left: 2px solid $light-black;
+			width: 100%;
+			.brand-product-slider {
+				position: relative;
+				.swiper-container {
+					height: 480px;
+					.swiper-slide {
+						display: flex;
+						justify-content: space-between;
+						padding: 0 10px;
+					}
+				}
+				.swiper-pagination {
+					left: -80px;
+					top: 0;
+					display: flex;
+					flex-direction: column;
+					span {
+						font-size: 28px;
+						line-height: 40px;
+						background: 0;
+						width: auto;
+						height: auto;
+						font-family: 'Montserrat';
+						font-weight: bold;
+						margin-bottom: 20px;
+					}
+				}
+				.swiper-button-prev,
+				.swiper-button-next {
+					width: 20px;
+					height: 20px;
+					top: -40px;
+					left: 0px;
+					right: 0;
+					margin: 0 auto;
+					background: url(../images/icon_10_7.svg) no-repeat;
+					background-size: cover;
+				}
+				.swiper-button-next {
+					background: url(../images/icon_10_8.svg) no-repeat;
+					top: auto;
+					bottom: -60px;
+				}
+			}
+		}
+
+	}
+}
+.product-preview {
+	display: block;
+	width: 270px;
+	height: 460px;
+	box-shadow: 0 10px 20px 0 rgba(0,0,0,0.1);
+	transition: all 0.3s;
+	&:hover {
+		box-shadow: 0 10px 20px 0 rgba(0,0,0,0.4);
+	}
+	.image-holder {
+		position: relative;
+		background: $grey;
+		width: 270px;
+		height: 270px;
+		img {
+			width: 270px;
+			height: 270px;
+		}
+		.gift {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			i {
+				font-size: 20px;
+			}	
+		}
+	}
+	.product-description {
+		p {
+			height: 46px;
+		}
+		.price {
+			display: block;
+			font-size: 20px;
+			line-height: 36px;
+			font-family: 'Montserrat';
+			margin-bottom: 10px;
+		}
+	}
+}
+.top-sale,.new-items {
+	.container {
+		.left-box {
+			flex-shrink: 0;
+		}
+		.right-box {
+			.slider {
+				max-width: 890px;
+				width: 100%;
+				position: relative;
+				.swiper-container {
+					padding: 0 10px;
+					height: 480px;
+				}
+				.swiper-button-prev,
+				.swiper-button-next {
+					width: 20px;
+					height: 20px;
+					top: 50%;
+					transform: translateY(-50%);
+					left: -25px;
+					margin: 0 auto;
+					background: url(../images/icon_10_5.svg) no-repeat;
+					background-size: cover;
+				}
+				.swiper-button-next {
+					background: url(../images/icon_10_6.svg) no-repeat;
+					right: -20px;
+					left: auto;
+				}
+			}
+		}
+	}
+}
+.new-items {
+	padding-top: 145px;
+}
+
+.contact-form {
+	padding-bottom: 142px;
+	.container {
+		form {
+			max-width: 580px;
+			width: 100%;
+			flex-shrink: 0;
+			background: $white;
+			@include box-shadow;
+			.form-group {
+				width: 100%;
+				height: 60px;
+				border-radius: 5px;
+				position: relative;
+				overflow: hidden;
+				&.textarea-holder {
+					height: 120px;
+				} 
+				input {
+					width: 100%;
+					height: 100%;
+					padding-left: 60px;
+					border: 0;
+					background: $light-white;
+					appearance: none;
+					outline: 0;
+					font-size: 15px;
+					line-height: 1.2;
+				}
+				textarea {
+					width: 100%;
+					height: 100%;
+					padding: 20px 20px 20px 60px;
+					border: 0;
+					background: $light-white;
+					appearance: none;
+					outline: 0;
+					resize: none;
+				}
+				i {
+					font-size: 20px;
+					position: absolute;
+					top: 20px;
+					left: 20px;
+				}
+			}
+			button {
+				font-size: 16px;
+				line-height: 24px;
+			}
+		}
+		.right-box {
+			max-width: 425px;
+			width: 100%;
+			flex-shrink: 0;
+			i {
+				font-size: 20px;
+				&:before {
+					color: $white;
+				}
+			}
+		}
+	}
+}
+
+// #parallax-container {
+// 		display: block;
+//    	height: 1080px; // This height can be adjusted here and below
+// 	div {
+// 		position: fixed;
+// 		top: 0;
+// 		background-position: center !important;
+// 		transform: translateY(0px);
+// 		height: 1080px; // Keep this the same height as above
+// 		width: 100%;
+// 	}
+// }
+// #content {
+//    position: relative;
+// }

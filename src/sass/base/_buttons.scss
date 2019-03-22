@@ -1,0 +1,35 @@
+.big-btn,
+.medium-btn,
+.small-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 270px;
+	width: 100%;
+	height: 40px;
+	border-radius: 5px;
+	@include button-shadow;
+	@include trans(0.3s);
+	color: $white;
+}
+.medium-btn {
+	width: 230px;
+}
+.small-btn {
+	width: 40px;
+}
+.light-black {
+   @include btn-theme($light-black);
+}
+.gold {
+   @include btn-theme($gold);
+}
+.red {
+	@include btn-theme($red);	
+}
+.white {
+   @include btn-theme($white);
+   &:hover {
+   	background: $light-white;
+   }
+}

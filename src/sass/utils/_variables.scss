@@ -1,0 +1,37 @@
+// Sass Variables
+// Colors
+$black: #000;
+$light-black: #676767;
+$white: #fff;
+$light-white: #fafafa;
+$grey: #e6e6e6;
+$gold: #FEC76C;
+$red: #FF8181;
+
+// Body
+$base-font-size: 15px !default;
+$base-line-height: 24px !default;
+$base-text-color: $light-black !default;
+$base-font-family: 'Open Sans', Arial, Helvetica, sans-serif !default;
+$base-background-color: $light-white !default;
+$base-min-width: 320px;
+
+// Headings
+$h1-font-size: 28px !default;
+$h2-font-size: 20px !default;
+$h3-font-size: 15px !default;
+
+$headings-font-family: inherit !default;
+$headings-font-weight: bold !default;
+$headings-color: inherit !default;
+
+// use this variables
+
+// 5px $indent/64
+// 10px $indent/32
+// 20px $indent/16
+// 40px $indent/8
+// 80px $indent/4
+// 160px $indent/2
+
+$indent: 320px;
