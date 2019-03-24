@@ -120,11 +120,17 @@ textarea:focus::-ms-placeholder {
 .text-right {
   text-align: right; }
 
+hr {
+  border: 2px solid #e6e6e6; }
+
 .h1 {
   font-family: 'Montserrat';
   font-size: 28px;
   line-height: 40px;
   font-weight: bold; }
+
+.p-4 {
+  padding: 80px; }
 
 .p-8 {
   padding: 40px; }
@@ -141,6 +147,15 @@ textarea:focus::-ms-placeholder {
 .m-auto {
   margin: 0 auto; }
 
+.mt-2 {
+  margin-top: 160px; }
+
+.mt-4 {
+  margin-top: 80px; }
+
+.mt-8 {
+  margin-top: 40px; }
+
 .mb-2 {
   margin-bottom: 160px; }
 
@@ -153,11 +168,23 @@ textarea:focus::-ms-placeholder {
 .mb-16 {
   margin-bottom: 20px; }
 
+.mr-4 {
+  margin-right: 80px; }
+
 .mr-8 {
   margin-right: 40px; }
 
 .mr-16 {
   margin-right: 20px; }
+
+.ml-4 {
+  margin-left: 80px; }
+
+.ml-8 {
+  margin-left: 40px; }
+
+.ml-16 {
+  margin-left: 20px; }
 
 @font-face {
   font-family: 'Aromat_doma';
@@ -887,6 +914,42 @@ a {
 #content {
   margin-top: 80px; }
 
+.section-title-block {
+  min-height: 890px;
+  background: url(../images/Background_2.png) no-repeat, url(../images/Background_0.png) no-repeat;
+  background-size: cover;
+  position: relative; }
+  .section-title-block .parallax-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0; }
+    .section-title-block .parallax-image#img_3 {
+      z-index: 3;
+      right: auto;
+      left: 400px; }
+    .section-title-block .parallax-image#img_4 {
+      z-index: 3; }
+    .section-title-block .parallax-image#img_5 {
+      z-index: 3;
+      left: auto; }
+    .section-title-block .parallax-image#img_6 {
+      z-index: 3;
+      top: auto;
+      bottom: -100px;
+      left: 400px;
+      right: auto; }
+  .section-title-block .container .subscribe-title {
+    -ms-flex-align: start;
+        align-items: flex-start;
+    background: #fff;
+    position: relative;
+    z-index: 2; }
+    .section-title-block .container .subscribe-title img {
+      max-width: 480px; }
+    .section-title-block .container .subscribe-title a {
+      width: 190px; }
+
 .what-we-offer img {
   width: 80px;
   height: 80px;
@@ -1126,3 +1189,17 @@ a {
       font-size: 20px; }
       .contact-form .container .right-box i:before {
         color: #fff; }
+
+.section-title-pages {
+  height: 320px;
+  background: url(../images/Background_2.png) no-repeat, url(../images/Background_0.png) no-repeat;
+  background-size: cover;
+  position: relative; }
+
+.page-wrapper {
+  max-width: 1360px;
+  width: 100%;
+  margin: -160px auto 160px;
+  background: #fff;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+  position: relative; }

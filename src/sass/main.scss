@@ -47,6 +47,57 @@
 #content {
 	margin-top: $indent/4;	
 }
+.section-title-block {
+	min-height: 890px;
+	background: url(../images/Background_2.png) no-repeat ,url(../images/Background_0.png) no-repeat;
+	background-size: cover;
+	position: relative;
+	.parallax-image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		&#img_1 {
+			
+		}
+		&#img_2 {
+
+		}
+		&#img_3 {
+			z-index: 3;
+			right: auto;
+			left: 400px;
+		}
+		&#img_4 {
+			z-index: 3;
+		}
+		&#img_5 {
+			z-index: 3;
+			left: auto;
+		}
+		&#img_6 {
+			z-index: 3;
+			top: auto;
+			bottom: -100px;
+			left: 400px;
+			right: auto;
+		}
+	}
+	.container {
+		.subscribe-title {
+			align-items: flex-start;
+			background: $white;
+			position: relative;
+			z-index: 2;
+			img {
+				max-width: 480px;
+			}
+			a {
+				width: 190px;
+			}
+		}
+	} 
+}
 .what-we-offer {
 	img {
 		width: $indent/4;
@@ -58,6 +109,7 @@
 		line-height: 36px;
 	}
 }
+
 .gift-block {
 	.container {
 		.left-box {
@@ -85,6 +137,7 @@
 		}
 	}
 }
+
 .brand-block {
 	.container {
 		.title-block {
@@ -190,6 +243,7 @@
 
 	}
 }
+
 .product-preview {
 	display: block;
 	width: 270px;
@@ -230,6 +284,7 @@
 		}
 	}
 }
+
 .top-sale,.new-items {
 	.container {
 		.left-box {
@@ -264,6 +319,7 @@
 		}
 	}
 }
+
 .new-items {
 	padding-top: 145px;
 }
@@ -333,18 +389,17 @@
 	}
 }
 
-// #parallax-container {
-// 		display: block;
-//    	height: 1080px; // This height can be adjusted here and below
-// 	div {
-// 		position: fixed;
-// 		top: 0;
-// 		background-position: center !important;
-// 		transform: translateY(0px);
-// 		height: 1080px; // Keep this the same height as above
-// 		width: 100%;
-// 	}
-// }
-// #content {
-//    position: relative;
-// }
+.section-title-pages {
+	height: 320px;
+	background: url(../images/Background_2.png) no-repeat ,url(../images/Background_0.png) no-repeat;
+	background-size: cover;
+	position: relative;
+}
+.page-wrapper {
+	max-width: 1360px;
+	width: 100%;
+	margin: -160px auto 160px;
+	background: $white;
+	@include box-shadow;
+	position: relative;
+}

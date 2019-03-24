@@ -68,6 +68,20 @@ function initPage() {
           prevEl: '.new-slider .swiper-button-prev',
         },
     })
-
+    
 }
 
+$(window).scroll(function(){
+      var ws = $(window).scrollTop();
+      $('#img_1').css({
+        'transform': 'translate(0px, -'+ ws / 1.2 +'px)'
+      });
+
+      $('#img_2').css({
+        'transform': 'translate(0px,  -'+ ws / 2.5 +'px)'
+      });
+      $('#img_3,#img_4,#img_5,#img_6').css({
+        'transform': 'translate(0px, -'+ ws / 3 +'px)'
+      });
+
+    });
