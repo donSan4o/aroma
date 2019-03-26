@@ -3,7 +3,7 @@
     min-height: 70px;
     padding-top: $indent/4;
     padding-bottom: $indent/2;
-    @media (max-width: 680px) {
+    @media (max-width: 768px) {
         padding: $indent/4 $indent/8 $indent/2;
     }
     @media (max-width: 420px) {

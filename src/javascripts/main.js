@@ -4,17 +4,27 @@ $(document).ready(initPage);
 
 function initPage() {
     $('.menu-mobile').click(function () {
-    	$('.fader').toggleClass('show');
-    	$('#myMenu').toggleClass('show-menu');
+    	$('#myMenu').show().addClass('flex');
     });
-    $('.fader').click(function () {
-    	$('.fader').removeClass('show');
-    	$('#myMenu').removeClass('show-menu');
+    $('.close-menu').click(function () {
+        $('#myMenu').hide().removeClass('flex');
     });
-    $('#myMenu a').click(function() {
-    	$('#myMenu').removeClass('show-menu');
-    	$('.fader').removeClass('show');
+    
+    $('.open-drop').click(function() {
+        $(this).parent().toggleClass('open').children('.label-holder').slideToggle();
     });
+    $('.filter-link').click(function(e) {
+        e.preventDefault();
+        $('.filter-box').show();
+    });
+    $('.close-filter').click(function() {
+        $('.filter-box').hide();
+    });
+    $('.show-btn').click(function(e) { 
+        e.preventDefault();
+        $(this).toggleClass('rotate');
+        $('.show-more').toggleClass('show-less');
+    })    
     var mySwiper = new Swiper ('.brand-slider .swiper-container', {
         direction: 'vertical',
         slidesPerView: 3,
@@ -114,20 +124,18 @@ function initPage() {
 }
 
 $(window).scroll(function(){
-      var ws = $(window).scrollTop();
-      $('#img_1').css({
+    var ws = $(window).scrollTop();
+    $('#img_1').css({
         'transform': 'translate(0px, -'+ ws / 1.2 +'px)'
-      });
-
-      $('#img_2').css({
-        'transform': 'translate(0px,  -'+ ws / 2.5 +'px)'
-      });
-      $('#img_3,#img_4,#img_5,#img_6').css({
-        'transform': 'translate(0px, -'+ ws / 3 +'px)'
-      });
-      $('#mob_image').css({
-        'transform': 'translate(0px, -'+ ws / 8 +'px)'
-      });
-      
-
     });
+    $('#img_2').css({
+        'transform': 'translate(0px,  -'+ ws / 2.5 +'px)'
+    });
+    $('#img_3,#img_4,#img_5,#img_6').css({
+        'transform': 'translate(0px, -'+ ws / 3 +'px)'
+    });
+    $('#mob_image').css({
+        'transform': 'translate(0px, -'+ ws / 8 +'px)'
+    });
+});
+

@@ -76,14 +76,14 @@ textarea:focus::-ms-placeholder {font-size: 0;}
 	width: 270px !important;
 }
 .hide-mobile {
-	@media (max-width: 680px) {
+	@media (max-width: 768px) {
 		display: none !important;
 	}
 }
 .hide-desktop {
-	display: none;
-	@media (max-width: 680px) {
-		display: block;
+	display: none !important;
+	@media (max-width: 768px) {
+		display: block !important;
 	}
 }
 .d-flex {
@@ -155,6 +155,10 @@ hr {
 // padding-left
 .pl-16 {
 	padding-left: $indent/16;
+}
+
+.pb-16 {
+	padding-bottom: $indent/16;
 }
 
 .m-auto {

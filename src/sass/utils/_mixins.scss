@@ -34,7 +34,6 @@
 	background-color: $btn-color;
 	&:hover {
 	   background-color: rgba($btn-color, 0.7);
-
 	}
 }
 @mixin trans($val...) {
