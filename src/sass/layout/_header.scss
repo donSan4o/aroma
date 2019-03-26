@@ -10,34 +10,42 @@
     padding: 0 80px;
     background: $white;
     @include box-shadow;
+    @media (max-width: 680px) {
+        padding: 0 40px;
+    }
+    @media (max-width: 420px) {
+        padding: 0 20px;
+    }
     .logo {
         width: 80px;
         height: 40px;
     }
     .menu-mobile {
         display: none;
-        width: 30px;
-        height: 20px;
+        width: 40px;
+        height: 40px;
         flex-shrink: 0;
         position: relative;
         z-index: 100;
+        border-radius: 5px;
+        @include button-shadow;
         @media (max-width: 769px) {
             display: block;
             span {
-                width: 30px;
+                width: 18px;
                 height: 2px;
                 background: $black;
                 position: absolute;
-                top: 0;
+                top: 14px;
                 left: 0;
                 right: 0;
                 margin: 0 auto;
                 transition: all 0.3s;
                 &:nth-child(2) {
-                    top: 9px;
+                    top: 19px;
                 }
                 &:nth-child(3) {
-                    top: 17px;
+                    top: 24px;
                 }
             }
         }
@@ -71,6 +79,25 @@
     .basket {
         flex-shrink: 0;
         margin-left: $indent/8;
-
+        position: relative;
+        @media (max-width: 769px) {
+            margin: 0;
+        }
+        .total {
+            display: block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            text-align: center;
+            background: $gold;
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            color: $light-black;
+        }
     }
 }

@@ -19,23 +19,25 @@
             <a href="#" class="logo"><img src="images/logo.png" alt="Аромат Дома"></a>
             <div class="menu-basket d-flex align-items-center">
                 <ul id="myMenu" class="d-flex align-items-center">
-                    <li><a href="#">Главная</a></li>
+                    <li><a href="index.html">Главная</a></li>
                     <li><a href="#">Магазин</a></li>
-                    <li><a href="#">Контакты</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
                     <li><a href="about.html">О нас</a></li> 
                 </ul>
-                <a href="" class="basket small-btn white"><i class="icon-Icon_20_1"></i></a>
+                <a href="" class="basket small-btn white"><i class="icon-Icon_20_12"></i> <span class="total">0</span></a>
             </div>
         </header>
 
         <main id="content">
             <section class="section-title-block mb-2">
-                <img src="images/Background_1.png" id="img_1" class="parallax-image" alt="">
-                <img src="images/Background_3_0.png" id="img_2" class="parallax-image" alt="">
-                <img src="images/bg-3-top.png" id="img_3" class="parallax-image" alt="">
-                <img src="images/bg-3-left.png" id="img_4" class="parallax-image" alt="">
-                <img src="images/bg-3-right.png" id="img_5" class="parallax-image" alt="">
-                <img src="images/bg-3-bottom.png" id="img_6" class="parallax-image" alt="">
+                <img src="images/Background_1.png" id="img_1" class="parallax-image hide-mobile" alt="">
+                <img src="images/Background_3_0.png" id="img_2" class="parallax-image hide-mobile" alt="">
+                <img src="images/Background_1_3.png" id="mob_image" class="parallax-image hide-desktop" alt="">
+                
+                <img src="images/bg-3-top.png" id="img_3" class="parallax-image hide-mobile" alt="">
+                <img src="images/bg-3-left.png" id="img_4" class="parallax-image hide-mobile" alt="">
+                <img src="images/bg-3-right.png" id="img_5" class="parallax-image hide-mobile" alt="">
+                <img src="images/bg-3-bottom.png" id="img_6" class="parallax-image hide-mobile" alt="">
                 <div class="container pt-2">
                     <div class="subscribe-title p-4 d-flex justify-content-between">
                         <img src="images/Duhi2.png" alt="Аромат Дома" class="mr-4">
@@ -77,17 +79,40 @@
             <section class="gift-block pt-1">
                 <div class="container d-flex justify-content-between">
                     <div class="left-box">
-                        <h2 class="h1 mb-8">Подарочный сертификат для ваших близких</h2>
-                        <p class="mb-8">У нас имеются подарочные сертификаты на сумму 5000, 10 000 и 15 000 рублей.</p>
-                        <ul class="d-flex">
-                            <li class="small-btn white mr-16"><i class="icon-Icon_20_15"></i></li>
-                            <li class="small-btn red mr-16"><i class="icon-Icon_20_16"></i></li>
-                            <li class="small-btn gold"><i class="icon-Icon_20_17"></i></li>
+                        <div>
+                            <h2 class="h1 mb-8">Подарочный сертификат для ваших близких</h2>
+                            <p class="mb-8">У нас имеются подарочные сертификаты на сумму 5000, 10 000 и 15 000 рублей.</p>
+                            <ul class="d-flex">
+                                <li class="small-btn white mr-16"><i class="icon-Icon_20_15"></i></li>
+                                <li class="small-btn red mr-16"><i class="icon-Icon_20_16"></i></li>
+                                <li class="small-btn gold"><i class="icon-Icon_20_17"></i></li>
+                            </ul>
+                        </div>
+                        <ul class="steps p-8 box-shadow hide-desktop">
+                            <li class="d-flex align-items-center mb-16">
+                                <b class="h1">01</b>
+                                <p>Выберите номинал</p>
+                            </li>
+                            <li class="d-flex align-items-center mb-16">
+                                <b class="h1">02</b>
+                                <p>Оформите</p>
+                            </li>
+                            <li class="d-flex align-items-center mb-16">
+                                <b class="h1">03</b>
+                                <p>Получите доставку</p>
+                            </li>
+                            <li class="d-flex align-items-center mb-16">
+                                <b class="h1">04</b>
+                                <p>Подарите близким</p>
+                            </li>
+                            <li>
+                                <a href="" class="medium-btn light-black">Выбрать номинал</a>
+                            </li>
                         </ul>
                     </div>
                     <div class="right-box d-flex">
                         <img src="images/sertificates.png" class="mr-8" alt="Сертификаты">
-                        <ul class="steps p-8 box-shadow">
+                        <ul class="steps p-8 box-shadow hide-mobile">
                             <li class="d-flex align-items-center mb-16">
                                 <b class="h1">01</b>
                                 <p>Выберите номинал</p>
@@ -161,7 +186,7 @@
                                                 <div class="medium-btn light-black w-230 m-auto">В корзину</div>
                                             </div>
                                         </a>
-                                        <a href="" class="product-preview">
+                                        <a href="" class="product-preview hide-mobile">
                                             <div class="image-holder">
                                                 <img src="images/0_4.png" alt="brand">
                                                 <span class="gift small-btn gold"><i class="icon-Icon_20_13"></i></span>
@@ -185,7 +210,7 @@
                                                 <div class="medium-btn light-black w-230 m-auto">В корзину</div>
                                             </div>
                                         </a>
-                                        <a href="" class="product-preview">
+                                        <a href="" class="product-preview hide-mobile">
                                             <div class="image-holder">
                                                 <img src="images/0_3.png" alt="brand">
                                                 <span class="gift small-btn gold"><i class="icon-Icon_20_13"></i></span>
@@ -209,7 +234,7 @@
                                                 <div class="medium-btn light-black w-230 m-auto">В корзину</div>
                                             </div>
                                         </a>
-                                        <a href="" class="product-preview">
+                                        <a href="" class="product-preview hide-mobile">
                                             <div class="image-holder">
                                                 <img src="images/0_4.png" alt="brand">
                                                 <span class="gift small-btn gold"><i class="icon-Icon_20_13"></i></span>
@@ -427,9 +452,11 @@
                         <button class="medium-btn light-black w-270 m-auto">Отправить</button>
                     </form>
                     <div class="right-box">
-                        <h2 class="h1 mb-8">Подберем аромат специально для вас</h2>
-                        <p class="mb-16">Не можете определиться или остались вопросы? Напишите нам, и мы бесплатно вас проконсультируем.</p>
-                        <p class="mb-8">Так же вы можете найти нас в соцсетях:</p>
+                        <div>
+                            <h2 class="h1 mb-8">Подберем аромат специально для вас</h2>
+                            <p class="mb-16">Не можете определиться или остались вопросы? Напишите нам, и мы бесплатно вас проконсультируем.</p>
+                            <p class="mb-8">Так же вы можете найти нас в соцсетях:</p>
+                        </div>
                         <ul class="d-flex">
                             <li><a href="" class="small-btn light-black mr-16"><i class="icon-Icon_20_7"></i></a></li>
                             <li><a href="" class="small-btn light-black mr-16"><i class="icon-Icon_20_9"></i></a></li>
@@ -467,6 +494,8 @@
                         <li><i class="icon-Icon_20_11"></i><a href="">Где представлены</a></li>
                         <li><i class="icon-Icon_20_10"></i><a href="">Доставка и оплата</a></li>
                     </ul>
+                </div>
+                <div class="empty-border hide-desktop">
                 </div>
             </div>
         </footer>

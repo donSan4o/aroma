@@ -14,6 +14,9 @@
 }
 .medium-btn {
 	width: 230px;
+	@media (max-width: 420px) {
+		max-width: 190px;
+	}
 }
 .small-btn {
 	width: 40px;

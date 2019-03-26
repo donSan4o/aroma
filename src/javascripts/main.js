@@ -19,7 +19,6 @@ function initPage() {
         direction: 'vertical',
         slidesPerView: 3,
         spaceBetween: 40,
-
         pagination: {
             el: '.brand-slider .swiper-pagination',
             clickable: true,
@@ -31,6 +30,26 @@ function initPage() {
           nextEl: '.brand-slider .swiper-button-next',
           prevEl: '.brand-slider .swiper-button-prev',
         },
+        breakpoints: {
+            680: {
+                spaceBetween: 20
+            }
+        }
+    })
+
+    var mySwiper = new Swiper ('.contact-slider .swiper-container', {
+        direction: 'vertical',
+        slidesPerView: 2,
+        spaceBetween: 20,
+        navigation: {
+          nextEl: '.contact-slider .swiper-button-next',
+          prevEl: '.contact-slider .swiper-button-prev',
+        },
+        breakpoints: {
+            680: {
+                spaceBetween: 40
+            }
+        }
     })
 
     var mySwiper = new Swiper ('.brand-product-slider .swiper-container', {
@@ -38,6 +57,12 @@ function initPage() {
         slidesPerView: 1,
         slidesPerColumn: 1,
         spaceBetween: 60,
+        breakpoints: {
+            680: {
+                direction: 'horizontal',
+                spaceBetween: 20
+            }
+        },
         pagination: {
             el: '.brand-product-slider .swiper-pagination',
             clickable: true,
@@ -58,7 +83,16 @@ function initPage() {
           nextEl: '.top-sale-slider .swiper-button-next',
           prevEl: '.top-sale-slider .swiper-button-prev',
         },
+        breakpoints: {
+            680: {
+                slidesPerView: 2
+            },
+            420: {
+                slidesPerView: 1
+            }
+        }
     })
+
 
     var mySwiper = new Swiper ('.new-slider .swiper-container', {
         slidesPerView: 3,
@@ -67,6 +101,14 @@ function initPage() {
           nextEl: '.new-slider .swiper-button-next',
           prevEl: '.new-slider .swiper-button-prev',
         },
+        breakpoints: {
+            680: {
+                slidesPerView: 2
+            },
+            420: {
+                slidesPerView: 1
+            }
+        }
     })
     
 }
@@ -83,5 +125,9 @@ $(window).scroll(function(){
       $('#img_3,#img_4,#img_5,#img_6').css({
         'transform': 'translate(0px, -'+ ws / 3 +'px)'
       });
+      $('#mob_image').css({
+        'transform': 'translate(0px, -'+ ws / 8 +'px)'
+      });
+      
 
     });

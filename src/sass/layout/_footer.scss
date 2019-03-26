@@ -3,12 +3,31 @@
     min-height: 70px;
     padding-top: $indent/4;
     padding-bottom: $indent/2;
+    @media (max-width: 680px) {
+        padding: $indent/4 $indent/8 $indent/2;
+    }
+    @media (max-width: 420px) {
+        padding: $indent/4 $indent/16 $indent/4;
+    }
     .container {
+        @media (max-width: 680px) {
+            flex-wrap: wrap;
+        }
         div {
+            @media (max-width: 680px) {
+                width: 50%;
+            }
+            @media (max-width: 420px) {
+                width: 100%;
+                margin-bottom: 40px;
+            }
             h2 {
                 margin-bottom: $indent/8
             }  
             &.socials {
+                @media (max-width: 680px) {
+                    order: 2;
+                }
                 li {
                     margin-right: $indent/16;
                     &:last-child {
@@ -18,6 +37,12 @@
             }
             &.contacts,
             &.service {
+                @media (max-width: 680px) {
+                    order: 1;
+                }
+                @media (max-width: 420px) {
+                    margin-bottom: 40px;
+                }
                 li {
                     display: flex;
                     margin-bottom: $indent/16;
@@ -28,6 +53,34 @@
                     &:last-child {
                         margin-bottom: 0;
                     }
+                }
+            }
+            &.service {
+                @media (max-width: 680px) {
+                    padding-left: 20px;
+                    border-left: 1px solid $light-black;
+                }
+                @media (max-width: 420px) {
+                    padding: 0;
+                    border: 0;
+                }
+            }
+            &.contacts {
+                @media (max-width: 680px) {
+                    margin-bottom: 80px;
+                }
+                @media (max-width: 420px) {
+                    margin-bottom: 40px;
+                }
+            }
+            &.empty-border {
+                order: 2;
+                @media (max-width: 680px) {
+                    padding-left: 20px;
+                    border-left: 1px solid $light-black;
+                } 
+                @media (max-width: 420px) {  
+                    display: none;
                 }
             }
         }
