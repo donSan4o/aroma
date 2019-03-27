@@ -120,6 +120,48 @@ function initPage() {
             }
         }
     })
+    var mySwiper = new Swiper ('.volume-holder .swiper-container', {
+        slidesPerView: 4,
+        spaceBetween: 20,
+        navigation: {
+          nextEl: '.volume-holder .swiper-button-next',
+          prevEl: '.volume-holder .swiper-button-prev',
+        },
+        breakpoints: {
+            420: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            }
+        }
+    })
+    var mySwiper = new Swiper ('.also-slider .swiper-container', {
+        slidesPerView: 4,
+        spaceBetween: 40,
+        navigation: {
+          nextEl: '.also-slider .swiper-button-next',
+          prevEl: '.also-slider .swiper-button-prev',
+        },
+        breakpoints: {
+            680: {
+                slidesPerView: 2
+            },
+            420: {
+                slidesPerView: 1
+            }
+        }
+    })
+    
+    
+    $('.add').click(function () {
+        if ($(this).prev().val() < 99) {
+        $(this).prev().val(+$(this).prev().val() + 1);
+        }
+    });
+    $('.sub').click(function () {
+        if ($(this).next().val() > 1) {
+        if ($(this).next().val() > 1) $(this).next().val(+$(this).next().val() - 1);
+    }
+});
     
 }
 
