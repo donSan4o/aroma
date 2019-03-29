@@ -41,7 +41,7 @@ function initPage() {
           prevEl: '.brand-slider .swiper-button-prev',
         },
         breakpoints: {
-            680: {
+            768: {
                 spaceBetween: 20
             }
         }
@@ -56,7 +56,7 @@ function initPage() {
           prevEl: '.contact-slider .swiper-button-prev',
         },
         breakpoints: {
-            680: {
+            768: {
                 spaceBetween: 40
             }
         }
@@ -68,7 +68,7 @@ function initPage() {
         slidesPerColumn: 1,
         spaceBetween: 60,
         breakpoints: {
-            680: {
+            768: {
                 direction: 'horizontal',
                 spaceBetween: 20
             }
@@ -94,7 +94,7 @@ function initPage() {
           prevEl: '.top-sale-slider .swiper-button-prev',
         },
         breakpoints: {
-            680: {
+            768: {
                 slidesPerView: 2
             },
             420: {
@@ -112,14 +112,16 @@ function initPage() {
           prevEl: '.new-slider .swiper-button-prev',
         },
         breakpoints: {
-            680: {
-                slidesPerView: 2
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 20
             },
             420: {
                 slidesPerView: 1
             }
         }
     })
+
     var mySwiper = new Swiper ('.volume-holder .swiper-container', {
         slidesPerView: 4,
         spaceBetween: 20,
@@ -134,6 +136,7 @@ function initPage() {
             }
         }
     })
+
     var mySwiper = new Swiper ('.also-slider .swiper-container', {
         slidesPerView: 4,
         spaceBetween: 40,
@@ -151,7 +154,6 @@ function initPage() {
         }
     })
     
-    
     $('.add').click(function () {
         if ($(this).prev().val() < 99) {
         $(this).prev().val(+$(this).prev().val() + 1);
@@ -159,10 +161,19 @@ function initPage() {
     });
     $('.sub').click(function () {
         if ($(this).next().val() > 1) {
-        if ($(this).next().val() > 1) $(this).next().val(+$(this).next().val() - 1);
-    }
-});
-    
+            if ($(this).next().val() > 1) $(this).next().val(+$(this).next().val() - 1);
+        }
+    });
+
+    $('.tabs li').click(function(){
+        var tab_id = $(this).attr('data-tab');
+
+        $('.tabs li').removeClass('active');
+        $('.tab-content').removeClass('active');
+
+        $(this).addClass('active');
+        $("#"+tab_id).addClass('active');
+    })   
 }
 
 $(window).scroll(function(){
@@ -180,4 +191,5 @@ $(window).scroll(function(){
         'transform': 'translate(0px, -'+ ws / 8 +'px)'
     });
 });
+
 
