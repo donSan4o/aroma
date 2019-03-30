@@ -6,6 +6,7 @@ function initPage() {
     $('.menu-mobile').click(function () {
     	$('#myMenu').show().addClass('flex');
     });
+
     $('.close-menu').click(function () {
         $('#myMenu').hide().removeClass('flex');
     });
@@ -13,18 +14,63 @@ function initPage() {
     $('.open-drop').click(function() {
         $(this).parent().toggleClass('open').children('.label-holder').slideToggle();
     });
+
     $('.filter-link').click(function(e) {
         e.preventDefault();
         $('.filter-box').show();
     });
+
     $('.close-filter').click(function() {
         $('.filter-box').hide();
     });
+
     $('.show-btn').click(function(e) { 
         e.preventDefault();
         $(this).toggleClass('rotate');
         $('.show-more').toggleClass('show-less');
-    })    
+    });
+
+    $('.open-submit-modal').click(function(e) {
+        e.preventDefault();
+        $('.fader').show();
+        $('.submit-modal').show();
+    });
+
+    $('.open-checkout-modal').click(function(e) {
+        e.preventDefault();
+        $('.fader').show();
+        $('.checkout-modal').show();
+    });
+
+    $('.open-gift-modal').click(function(e) {
+        e.preventDefault();
+        $('.fader').show();
+        $('.gift-card-modal').show();
+        var mySwiper = new Swiper ('.gift-card-slider .swiper-container', {
+            slidesPerView: 3,
+            spaceBetween: 40,
+            navigation: {
+              nextEl: '.gift-card-slider .swiper-button-next',
+              prevEl: '.gift-card-slider .swiper-button-prev',
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2
+                },
+                420: {
+                    slidesPerView: 1
+                }
+            }
+        })
+    });
+
+    $('.fader,.close-modal').click(function (e) {
+        e.preventDefault();
+        $('.submit-modal,.gift-card-modal,.checkout-modal').hide();
+        $('.fader').hide();
+    });
+    
+    
     var mySwiper = new Swiper ('.brand-slider .swiper-container', {
         direction: 'vertical',
         slidesPerView: 3,
@@ -153,6 +199,9 @@ function initPage() {
             }
         }
     })
+
+    
+    
     
     $('.add').click(function () {
         if ($(this).prev().val() < 99) {
@@ -174,6 +223,32 @@ function initPage() {
         $(this).addClass('active');
         $("#"+tab_id).addClass('active');
     })   
+
+    var $sticky = $('.sticky');
+    var $stickyrStopper = $('.sticky-stopper');
+    
+    if (!!$sticky.offset()) { // make sure ".sticky" element exists
+
+    var generalSidebarHeight = $sticky.innerHeight();
+    var stickyTop = $sticky.offset().top;
+    var stickOffset = 0;
+    var stickyStopperPosition = $stickyrStopper.offset().top;
+    var stopPoint = stickyStopperPosition - generalSidebarHeight - stickOffset;
+    var diff = stopPoint + stickOffset;
+
+    $(window).scroll(function(){ // scroll event
+      var windowTop = $(window).scrollTop(); // returns number
+
+      if (stopPoint < windowTop) {
+          $sticky.css({ position: 'absolute', top: diff });
+      } else if (stickyTop < windowTop+stickOffset) {
+          $sticky.css({ position: 'fixed', top: stickOffset });
+      } else {
+          $sticky.css({position: 'absolute', top: 'initial'});
+      }
+    });
+
+  }
 }
 
 $(window).scroll(function(){
@@ -191,5 +266,3 @@ $(window).scroll(function(){
         'transform': 'translate(0px, -'+ ws / 8 +'px)'
     });
 });
-
-

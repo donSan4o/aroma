@@ -10,9 +10,9 @@
 @import "base/fonts";
 @import "base/typography";
 @import "base/buttons";
+@import "base/modals";
 // Layout
 @import "layout/header";
-@import "layout/forms";
 @import "layout/footer";
 
 .container {
@@ -20,15 +20,6 @@
 	width: 100%;
 	margin: 0 auto;
 	position: relative;
-}
-.fader {
-	display: none;
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: 98;
 }
 #content {
 	margin-top: $indent/4;	
@@ -61,6 +52,10 @@
 			z-index: 3;
 			right: auto;
 			left: 400px;
+			@media (max-width: 1400px) {
+				left: auto;
+				right: 0;
+			}
 		}
 		&#img_4 {
 			z-index: 3;
@@ -68,6 +63,9 @@
 		&#img_5 {
 			z-index: 3;
 			left: auto;
+			@media (max-width: 1400px) {
+				top: -650px;
+			}	
 		}
 		&#img_6 {
 			z-index: 3;
@@ -959,17 +957,24 @@
 		}
 	}
 }
-.shop-wrapper {
-	.title-filter-holder {
-		@media (max-width: 768px) {
-			display: flex !important;
-			.filter-link {
-				height: 36px;
-				display: flex;
-				align-items: center;
+.title-filter-holder {
+	@media (max-width: 768px) {
+		display: flex !important;
+		.filter-link,.total-price {
+			height: 36px;
+			display: flex;
+			align-items: center;
+			b {
+				width: 115px;
+				@media (max-width: 420px) {
+					width: 85px;
+				}
 			}
 		}
 	}
+}
+.shop-wrapper {
+	
 	.filter-box {
 		width: 270px;
 		@include box-shadow;
@@ -1498,231 +1503,414 @@
 	}
 }
 .checkout {
-	.left-box {
-		max-width: 890px;
-		width: 100%;
-		padding-right: 40px;
-		border-right: 2px solid $grey;
-		.checkout-product {
-			min-height: 160px;
-			@include box-shadow;
-			position: relative;
-			.img-holder {
-				width: 160px;
-				height: 160px;
-				background: $grey;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				flex-shrink: 0;
-				img {
-					max-width: 120px;
-				}
-			}
-			p {
-				max-width: 225px;
-			}
-			b {
-				font-size: 20px;
-				line-height: 36px;
-				font-family: $headings-font-family;
-			}
-			.quantity {
-				width: 115px;
-				input {
-					width: 35px;
-				}
-			}
-			.close-product {
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				width: 20px;
-				height: 20px;
-				background: $grey;
-				border-radius: 5px;
-				position: absolute;
-				top: -10px;
-				right: -10px;
-				img {
-					width: 10px;
-					height: 10px;
-				}
-			}
+	.page-wrapper {
+		background: $light-white;
+		flex-wrap: wrap;
+		@media (max-width: 768px) {
+			flex-direction: column;
 		}
-		.delivery-holder {
-			@include box-shadow;
-			.tabs {
-				display: flex;
-				@include button-shadow;
-				li {
-					width: 100%;
-					padding: 20px;
-					display: flex;
-					align-items: center;
-					cursor: pointer;
-					white-space: nowrap;
-					&:nth-child(2) {
-						border-right: 1px solid $grey;
-						border-left: 1px solid $grey;
-					}
-					.check {
-						width: 20px;
-						height: 20px;
-						border-radius: 5px;
-						background: $grey;
-						margin-right: 20px;
-						flex-shrink: 0;
-					}
-					b {
-						width: 100%;
-						text-align: right;
-					}
-					&.active {
-						background: $light-white;
-						.check {
-							background: url(../images/check.svg) no-repeat $gold;
-							background-position: center;
-							background-size: 10px 10px;
-						}
-					}
-				}
+		.left-box {
+			max-width: 890px;
+			width: 100%;
+			padding-right: 40px;
+			border-right: 2px solid $grey;
+			@media (max-width: 768px) {
+				padding-right: 0;
+				border: 0;
 			}
-			.tab-content {
-			  	display: none;
-			  	&.active {
-			  		display: inherit;
+			
+			.delivery-holder {
+				@include box-shadow;
+				background: $white;
+				@media (max-width: 768px) {
+					margin-bottom: 80px;
 				}
-				&.active.flex {
-			  		display: flex;
-			  		align-items: flex-start;
-			  		img {
-			  			max-width: 385px;
-			  			flex-shrink: 0;
-			  		}
-				}
-				.delivery-spots {
-					max-height: 310px;
-					overflow-y: auto;
-					img {
-						width: 40px;
-						height: 40px;
+				.tabs {
+					display: flex;
+					@include button-shadow;
+					@media (max-width: 768px) {
+						flex-wrap: wrap;
 					}
-				}
-				input {
-					width: 100%;
-					height: 40px;
-					border: 1px solid $grey;
-					padding: 10px;
-					border-radius: 5px;
-					background: $light-white;  
-					font-size: 15px;
-					line-height: 24px;
-					outline: none;
-					appearance: 0;
-				}
-				&.credit-holder {
-					.left-card {
+					li {
 						width: 100%;
-						@include button-shadow;
-						background: $grey;
-						border-radius: 20px;
-						height: 240px; 
-						input {
-							background: $white;
+						padding: 20px;
+						display: flex;
+						align-items: center;
+						cursor: pointer;
+						white-space: nowrap;
+						background: $white;
+						&:nth-child(2) {
+							border-right: 1px solid $grey;
+							border-left: 1px solid $grey;
+							@media (max-width: 768px) {
+								border: 0;
+							}
+						}
+						.check {
+							width: 20px;
+							height: 20px;
 							border-radius: 5px;
-							border: 0;  
-							&.date {
-								width: 80px;
+							background: $grey;
+							margin-right: 20px;
+							flex-shrink: 0;
+						}
+						b {
+							width: 100%;
+							text-align: right;
+						}
+						&.active {
+							background: $light-white;
+							.check {
+								background: url(../images/check.svg) no-repeat $gold;
+								background-position: center;
+								background-size: 10px 10px;
 							}
 						}
 					}
-					.right-card {
-						width: 100%;
-						height: 240px;
-						@include button-shadow;
-						background: $grey;
-						border-radius: 20px;
-						span {
-							display: block;
-							height: 60px;
-							border: 1px solid #95989A;
-							background: $light-black; 
+				}
+				.tab-content {
+				  	display: none;
+				  	&.active {
+				  		display: inherit;
+					}
+					&.active.flex {
+				  		display: flex;
+				  		align-items: flex-start;
+					}
+					&.image-spot {
+						@media (max-width: 768px) {
+							flex-wrap: wrap;
 						}
-						.cw {
-							justify-content: flex-end;
-							align-items: center;
-							p {
-								text-align: right;
+						img {
+				  			max-width: 385px;
+				  			flex-shrink: 0;
+				  			@media (max-width: 768px) {
+				  				max-width: 100%;
+				  				width: 100%;
+				  				height: 280px;
+				  				object-fit: cover;
+				  				margin: 0; 
+				  			}
+				  		}
+					}
+					.delivery-spots {
+						max-height: 310px;
+						overflow-y: auto;
+						@media (max-width: 768px) {
+							width: 100%;
+							padding-left: 0;
+							padding-right: 0;
+							height: auto;
+							max-height: 100%;
+							padding-bottom: 0;
+						}
+						img {
+							width: 40px;
+							height: 40px;
+						}
+						.choose-spot {
+							@media (max-width: 768px) {
+								display: flex !important;
+								margin: 0 auto;
 							}
-							i {
-								font-size: 10px;
-								line-height: 24px;
-								font-style: normal;
+						}
+					}
+					input {
+						width: 100%;
+						height: 40px;
+						border: 1px solid $grey;
+						padding: 10px;
+						border-radius: 5px;
+						background: $light-white;  
+						font-size: 15px;
+						line-height: 24px;
+						outline: 0;
+						appearance: none;
+					}
+					&.credit-holder {
+						@media (max-width: 768px) {
+							justify-content: center;
+						}
+						@media (max-width: 640px) {
+							flex-direction: column;
+						}
+						.left-card {
+							width: 100%;
+							@include button-shadow;
+							background: $grey;
+							border-radius: 20px;
+							height: 240px; 
+							@media (max-width: 768px) {
+								width: 365px;
+								height: 240px;
+								flex-shrink: 0;
+								position: relative;
+								z-index: 2;
+							}
+							@media (max-width: 640px) {
+								width: 100%;
 							}
 							input {
 								background: $white;
 								border-radius: 5px;
 								border: 0;  
-								width: 50px;
-								margin-left: 20px;
+								&.date {
+									width: 80px;
+								}
+							}
+						}
+						.right-card {
+							width: 100%;
+							height: 240px;
+							@include button-shadow;
+							background: $grey;
+							border-radius: 20px;
+							@media (max-width: 768px) {
+								width: 365px;
+								height: 240px;
+								flex-shrink: 0;
+								position: relative;
+								z-index: 1;
+								margin-top: 20%;
+								margin-left: -45%;
+							}
+							@media (max-width: 640px) {
+								width: 100%;
+								margin-top: 20px;
+								margin-left: 0;
+							}
+							span {
+								display: block;
+								height: 60px;
+								border: 1px solid #95989A;
+								background: $light-black; 
+								@media (max-width: 640px) {
+									margin-bottom: 20px;
+								}
+							}
+							.cw {
+								justify-content: flex-end;
+								align-items: center;
+								p {
+									text-align: right;
+								}
+								i {
+									font-size: 10px;
+									line-height: 24px;
+									font-style: normal;
+								}
+								input {
+									background: $white;
+									border-radius: 5px;
+									border: 0;  
+									width: 50px;
+									margin-left: 20px;
+								}
 							}
 						}
 					}
 				}
+				.contact-content {
+					div {
+						@media (max-width: 420px) {
+							flex-wrap: wrap;
+							margin: 0;
+						}
+					}
+					input {
+						width: 100%;
+						height: 40px;
+						border: 1px solid $grey;
+						padding: 10px;
+						border-radius: 5px;
+						background: $light-white;  
+						font-size: 15px;
+						line-height: 24px;
+						outline: 0;
+						appearance: none;
+						@media (max-width: 420px) {
+							margin: 0 auto 40px;		
+						}
+					}
+				}
 			}
-			.contact-content {
+		}
+		.right-box {
+			@include box-shadow;
+			background: $white;
+			position: relative;
+			top: 0;
+			@media (max-width: 768px) {
+				width: 100% !important;
+				margin: 0;
+			}
+			.promocode {
+				@media (max-width: 768px) {
+					display: flex;
+					flex-wrap: wrap;
+					h2 {
+						width: 100%;
+					}
+				}
+
 				input {
 					width: 100%;
 					height: 40px;
 					border: 1px solid $grey;
 					padding: 10px;
 					border-radius: 5px;
-					background: $light-white;  
+					background: $white;  
 					font-size: 15px;
 					line-height: 24px;
-					outline: none;
-					appearance: 0;
+					outline: 0;
+					appearance: none;
+					@media (max-width: 768px) {
+						width: 49%;
+						margin-right: 40px;
+					}
+					@media (max-width: 640px) {
+						width: 100%;
+						margin: 0 auto 20px;
+					}
+				}
+				a {
+					width: 100%;
+					@media (max-width: 640px) {
+						max-width: 100%;
+					}
+				}
+			} 
+			.final-deal {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 60px;
+				width: 100%;
+			}
+			.policy {
+				position: absolute;
+				bottom: -60px;
+				text-align: center;
+				a {
+					color: $gold;
+				}
+				@media (max-width: 768px) {
+					left: 0;
+					right: 0;
+					max-width: 270px;
+					margin: 0 auto;
 				}
 			}
 		}
-	}
-	.right-box {
-		@include box-shadow;
-		background: $white;
-		position: relative;
-		top: 0;
-		.promocode {
-			input {
+		.download {
+			display: flex;
+			margin: 0 auto;
+			@media (max-width: 768px) {
+				max-width: 270px;
 				width: 100%;
 				height: 40px;
-				border: 1px solid $grey;
-				padding: 10px;
-				border-radius: 5px;
-				background: $white;  
-				font-size: 15px;
-				line-height: 24px;
-				outline: none;
-				appearance: 0;
+				align-items: center;
+				justify-content: center;
+				@include button-shadow;
+				background: $white;
 			}
-			a {
-				width: 100%;
-			}
-		} 
-		.final-deal {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			height: 60px;
-			width: 100%;
 		}
-		.policy {
-			position: absolute;
-			bottom: -60px;
-			text-align: center;
-			a {
-				color: $gold;
+	}
+}
+.products-holder {
+	@media (max-width: 768px) {
+		margin-bottom: 0px;
+	}
+}
+.checkout-product {
+	min-height: 160px;
+	@include box-shadow;
+	position: relative;
+	background: $white;
+	@media (max-width: 420px) {
+		min-height: 100px;
+	}
+	.img-holder {
+		width: 160px;
+		height: 160px;
+		background: $grey;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		@media (max-width: 420px) {
+		    width: 100px;
+		    height: 100px;
+		    margin-right: 20px;
+		}
+		img {
+			max-width: 120px;
+			@media (max-width: 420px) {
+				max-width: 70px;
 			}
+		}
+	}
+	.description-box {
+		@media (max-width: 420px) {
+			padding: 0;
+			padding-right: 20px;
+		}
+		p {
+			max-width: 225px;
+			@media (max-width: 420px) {
+			    max-width: 120px;
+				font-size: 12px;
+				line-height: 14px;
+			}
+		}
+		b {
+			font-size: 20px;
+			line-height: 36px;
+			font-family: $headings-font-family;
+			@media (max-width: 420px) {
+				font-size: 16px;
+				line-height: 26px;
+			}
+		}
+		.quantity {
+			width: 115px;
+			@media (max-width: 768px) {
+				position: absolute;
+				top: -20px;
+				right: 60px;
+			}
+			input {
+				width: 35px;
+			}
+		}
+	}
+	.close-product {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 20px;
+		height: 20px;
+		background: $grey;
+		border-radius: 5px;
+		position: absolute;
+		top: -10px;
+		right: -10px;
+		img {
+			width: 10px;
+			height: 10px;
+		}
+		@media (max-width: 768px) {
+			width: 40px;
+			height: 40px;
+			background: $white;
+			border-radius: 5px;
+			position: absolute;
+			top: -20px;
+			right: -20px;
+			@include button-shadow;
+		}
+		@media (max-width: 420px) {
+			right: -10px;
 		}
 	}
 }

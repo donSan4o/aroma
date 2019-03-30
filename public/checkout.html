@@ -35,12 +35,17 @@
             </section>
             <section class="page-wrapper p-4 d-flex align-items-start mb-4">
                 <div class="left-box w-100">
+                    <div class="title-filter-holder justify-content-between hide-desktop">
+                        <h2 class="h1 mb-8 mobile-font">Корзина</h2>
+                        <p class="total-price">Товаров на сумму: <b class="text-right">27 000₽</b></p>
+                    </div>
+                    <hr class="small-hr mb-8 hide-desktop">
                     <div class="products-holder mb-2">
                         <div class="checkout-product d-flex align-items-center mb-8 w-100">
                             <div class="img-holder mr-8">
                                 <img src="images/0_3.png" alt="product image">
                             </div>
-                            <div class="p-8 d-flex align-items-center w-100 justify-content-between">
+                            <div class="p-8 d-flex align-items-center w-100 justify-content-between description-box">
                                 <p>Название продукта для покупки</p>
                                 <div class="quantity d-flex align-items-center">
                                     <button type="button" id="sub" class="sub small-btn"><i class="minus"></i></button>
@@ -55,7 +60,7 @@
                             <div class="img-holder mr-8">
                                 <img src="images/0_1.png" alt="product image">
                             </div>
-                            <div class="p-8 d-flex align-items-center w-100 justify-content-between">
+                            <div class="p-8 d-flex align-items-center w-100 justify-content-between description-box">
                                 <p>Название продукта для покупки</p>
                                 <div class="quantity d-flex align-items-center">
                                     <button type="button" id="sub" class="sub small-btn"><i class="minus"></i></button>
@@ -69,7 +74,7 @@
                             <div class="img-holder mr-8">
                                 <img src="images/0_4.png" alt="product image">
                             </div>
-                            <div class="p-8 d-flex align-items-center w-100 justify-content-between">
+                            <div class="p-8 d-flex align-items-center w-100 justify-content-between description-box">
                                 <p>Название продукта для покупки</p>
                                 <div class="quantity d-flex align-items-center">
                                     <button type="button" id="sub" class="sub small-btn"><i class="minus"></i></button>
@@ -80,6 +85,7 @@
                             </div>
                         </div>
                     </div>
+                    <hr class="small-hr mb-8 mt-8 hide-desktop">
                     <div class="delivery-holder p-8 mb-1">
                         <h2 class="h1 mb-8 text-center">01. Метод доставки</h2>
                         <hr class="mb-8">
@@ -88,7 +94,7 @@
                             <li class="tab-link" data-tab="tab-2"><i class="check"></i>Курьером<b>490 ₽</b></li>
                             <li class="tab-link" data-tab="tab-3"><i class="check"></i>Почта России<b>200 ₽</b></li>
                         </ul>
-                        <div id="tab-1" class="tab-content active flex">
+                        <div id="tab-1" class="tab-content active flex image-spot">
                             <img src="images/check-map.png" alt="map" class="mr-8">
                             <div class="delivery-spots p-8">
                                 <div class="mb-8">
@@ -107,6 +113,7 @@
                                     <hr class="small-hr mb-16">
                                     <p>620102, Екатеринбург, Серафимы  Дерябиной ул., д. 24</p>
                                 </div>
+                                <a href="#" class="hide-desktop medium-btn light-black choose-spot">Выбрать постамат</a>
                             </div>
                         </div>
                         <div id="tab-2" class="tab-content">
@@ -191,8 +198,10 @@
                     <a href="#" class="final-deal gold">Оформить заказ</a>
                     <p class="policy">Нажимая кнопку "оформить заказ", вы соглашаетесь с <a href="#">офертой</a></p>
                 </div>
+                <hr class="mt-4 mb-8 w-100">
+                <a href="#" class="download">Отправить чек по Е-mail</a>
             </section>
-
+            
         </main>
 
         <!-- </section> -->

@@ -47,7 +47,7 @@
                             <p class="mb-8">Современные ароматы – это профилактический, оздоровительный, натуральный способ поддержания эмоциональной и физической формы, снимающий стрессы, освежающий и придающий жизни изящный аромат. Узнать как это работает, вы можете скачав PDF или оставив заявку:</p>
                             <div class="d-flex">
                                 <a href="#" class="medium-btn light-black mr-8">Скачать PDF</a>
-                                <a href="#" class="medium-btn gold">Оставить заявку </a>
+                                <a href="#" class="medium-btn gold open-submit-modal">Оставить заявку</a>
                             </div>
                         </div>
                     </div>
@@ -107,7 +107,7 @@
                                 <p>Подарите близким</p>
                             </li>
                             <li>
-                                <a href="" class="medium-btn light-black">Выбрать номинал</a>
+                                <a href="#" class="medium-btn light-black open-gift-modal">Выбрать номинал</a>
                             </li>
                         </ul>
                     </div>
@@ -131,7 +131,8 @@
                                 <p>Подарите близким</p>
                             </li>
                             <li>
-                                <a href="" class="medium-btn light-black">Выбрать номинал</a>
+
+                                <a href="" class="medium-btn light-black open-gift-modal">Выбрать номинал</a>
                             </li>
                         </ul>
                     </div>
@@ -184,7 +185,7 @@
                                             <div class="product-description p-16">
                                                 <p class="mb-16">Название продукта в 2 строки</p>
                                                 <span class="price"><b>2 500</b> ₽</span>
-                                                <div class="medium-btn light-black w-230 m-auto">В корзину</div>
+                                                <div class="medium-btn light-black w-230 m-auto open-checkout-modal">В корзину</div>
                                             </div>
                                         </a>
                                         <a href="" class="product-preview">
@@ -195,7 +196,7 @@
                                             <div class="product-description p-16">
                                                 <p class="mb-16">Название продукта в 2 строки</p>
                                                 <span class="price"><b>2 500</b> ₽</span>
-                                                <div class="medium-btn light-black w-230 m-auto">В корзину</div>
+                                                <div class="medium-btn light-black w-230 m-auto open-checkout-modal">В корзину</div>
                                             </div>
                                         </a>
                                     </div>
@@ -208,7 +209,7 @@
                                             <div class="product-description p-16">
                                                 <p class="mb-16">Название продукта в 2 строки</p>
                                                 <span class="price"><b>2 500</b> ₽</span>
-                                                <div class="medium-btn light-black w-230 m-auto">В корзину</div>
+                                                <div class="medium-btn light-black w-230 m-auto open-checkout-modal">В корзину</div>
                                             </div>
                                         </a>
                                         <a href="" class="product-preview">
@@ -219,7 +220,7 @@
                                             <div class="product-description p-16">
                                                 <p class="mb-16">Название продукта в 2 строки</p>
                                                 <span class="price"><b>2 500</b> ₽</span>
-                                                <div class="medium-btn light-black w-230 m-auto">В корзину</div>
+                                                <div class="medium-btn light-black w-230 m-auto open-checkout-modal">В корзину</div>
                                             </div>
                                         </a>
                                     </div>
@@ -232,7 +233,7 @@
                                             <div class="product-description p-16">
                                                 <p class="mb-16">Название продукта в 2 строки</p>
                                                 <span class="price"><b>2 500</b> ₽</span>
-                                                <div class="medium-btn light-black w-230 m-auto">В корзину</div>
+                                                <div class="medium-btn light-black w-230 m-auto open-checkout-modal">В корзину</div>
                                             </div>
                                         </a>
                                         <a href="" class="product-preview">
@@ -243,7 +244,7 @@
                                             <div class="product-description p-16">
                                                 <p class="mb-16">Название продукта в 2 строки</p>
                                                 <span class="price"><b>2 500</b> ₽</span>
-                                                <div class="medium-btn light-black w-230 m-auto">В корзину</div>
+                                                <div class="medium-btn light-black w-230 m-auto open-checkout-modal">В корзину</div>
                                             </div>
                                         </a>
                                     </div>
@@ -500,7 +501,134 @@
                 </div>
             </div>
         </footer>
-        <div class="fader"></div>
+        <div class="fader"><a href="#" class="close-modal hide-desktop"><img src="images/cross.svg" alt="close"></a></div>
+
+        <div class="submit-modal p-8">
+            <h2 class="h1 mb-16">
+                Узнайте, как ароматы могут помочь вам. Оставьте заявку и получите консультацию 
+            </h2>
+            <form action="">
+                <div class="input-holder mb-16">
+                    <i class="icon-Icon_20_1"></i>
+                    <input type="text" placeholder="Ваше имя">
+                </div>
+                <div class="input-holder mb-16">
+                    <i class="icon-Icon_20_3"></i>
+                    <input type="text" placeholder="Ваша почта">
+                </div>
+                <div class="input-holder mb-16">
+                    <i class="icon-Icon_20_2"></i>
+                    <input type="text" placeholder="Номер телефона">
+                </div>
+                <button type="submit" class="medium-btn light-black m-auto">Оставить заявку</button>
+            </form>
+            <a href="#" class="close-modal"><img src="images/cross.svg" alt="close"></a>
+        </div>
+
+        <div class="gift-card-modal p-8">
+            <div class="d-flex flex-holder">
+                <div class="left-box">
+                    <h2 class="h1 mb-8">Выбор номинала</h2>
+                    <p>Выберете подарочный сертификат на 5000, 10000 или 15000₽, добавьте в корзину и оформите заказ</p>
+                </div>
+                <div class="gift-card-slider">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#" class="product-preview">
+                                    <div class="image-holder">
+                                        <img src="images/Sert_5.png" alt="brand">
+                                        <span class="gift small-btn gold"><i class="icon-Icon_20_13"></i></span>
+                                    </div>
+                                    <div class="product-description p-16">
+                                        <p class="mb-16">Название продукта в 2 строки</p>
+                                        <span class="price"><b>5000</b> ₽</span>
+                                        <div class="medium-btn light-black w-230 m-auto">В корзину</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="product-preview">
+                                    <div class="image-holder">
+                                        <img src="images/Sert_10.png" alt="brand">
+                                        <span class="gift small-btn gold"><i class="icon-Icon_20_13"></i></span>
+                                    </div>
+                                    <div class="product-description p-16">
+                                        <p class="mb-16">Название продукта в 2 строки</p>
+                                        <span class="price"><b>10000</b> ₽</span>
+                                        <div class="medium-btn light-black w-230 m-auto">В корзину</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="product-preview">
+                                    <div class="image-holder">
+                                        <img src="images/Sert_15.png" alt="brand">
+                                        <span class="gift small-btn gold"><i class="icon-Icon_20_13"></i></span>
+                                    </div>
+                                    <div class="product-description p-16">
+                                        <p class="mb-16">Название продукта в 2 строки</p>
+                                        <span class="price"><b>15000</b> ₽</span>
+                                        <div class="medium-btn light-black w-230 m-auto">В корзину</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+            <a href="#" class="close-modal"><img src="images/cross.svg" alt="close"></a>
+        </div>
+        <div class="checkout-modal p-8">
+            <div class="d-flex flex-holder align-items-start">
+                <div class="left-box">
+                    <h2 class="h1 mb-8">Товар добавлен в корзину</h2>
+                    <p class="mb-8">Сейчас в корзине <a href="#">3 товара</a> на сумму  27 000 ₽</p>
+                    <a href="#" class="medium-btn light-black mb-16 w-270">Продолжить покупки</a>
+                    <a href="#" class="medium-btn gold w-270">Перейти в корзину</a>
+                </div>
+                <div class="products-holder w-100">
+                    <div class="checkout-product d-flex align-items-center mb-8 w-100">
+                        <div class="img-holder mr-8">
+                            <img src="images/0_3.png" alt="product image">
+                        </div>
+                        <div class="p-8 d-flex align-items-center w-100 justify-content-between description-box">
+                            <p>Название продукта для покупки</p>
+                            <div class="quantity d-flex align-items-center">
+                                <button type="button" id="sub" class="sub small-btn"><i class="minus"></i></button>
+                                <input type="number" id="1" value="1" min="1" max="99"/>
+                                <button type="button" id="add" class="add small-btn"><i class="minus plus"></i></button>
+                            </div>
+                            <b class="price">1500 ₽</b>
+                        </div>
+                        <a href="#" class="close-product"><img src="images/cross.svg" alt="close"></a>
+                    </div>
+                    <div class="d-flex gift-text">
+                        <span class="gift small-btn gold mr-16"><i class="icon-Icon_20_13"></i></span>
+                        <p>Поздравляем, к этому товару идет в подарок <a href="#">Набор пробников</a></p>
+                    </div>
+                    <div class="checkout-product d-flex align-items-center w-100">
+                        <div class="img-holder mr-8">
+                            <img src="images/0_1.png" alt="product image">
+                        </div>
+                        <div class="p-8 d-flex align-items-center w-100 justify-content-between description-box">
+                            <p>Набор пробников "Teatro fragranze uniche"</p>
+                            <div class="quantity d-flex align-items-center">
+                                <button type="button" id="sub" class="sub small-btn"><i class="minus"></i></button>
+                                <input type="number" id="1" value="1" min="1" max="99"/>
+                                <button type="button" id="add" class="add small-btn"><i class="minus plus"></i></button>
+                            </div>
+                            <b class="price">0 ₽</b>
+                        </div>
+                        <a href="#" class="close-product"><img src="images/cross.svg" alt="close"></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="close-modal"><img src="images/cross.svg" alt="close"></a>
+        </div>
+
         <noscript>Detected missing Javascript support. Certain website features will not operate correctly with Javascript disabled.</noscript>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>

@@ -1,0 +1,228 @@
+.submit-modal {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	transform: translateY(-50%);
+	max-width: 580px;
+	width: 100%;
+	background: $white;
+	@include box-shadow;
+	z-index: 999;
+	@media (max-width: 420px) {
+	    height: 100vh;
+		overflow: auto;
+	}
+	.input-holder {
+		position: relative;
+		i {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 20px;
+			font-size: 20px;
+		}
+		input {
+			width: 100%;
+			height: 60px;
+			border-radius: 5px;
+			border: 0;
+			background: $light-white;
+			font-size: 15px;
+			line-height: 24px;
+			padding-left: 60px;
+			outline: 0;
+			appearance: none;
+		}
+	}
+	.medium-btn {
+		font-size: 16px;
+		line-height: 24px;
+	}
+}
+.gift-card-modal {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	transform: translateY(-50%);
+	max-width: 1360px;
+	width: 100%;
+	background: $white;
+	@include box-shadow;
+	z-index: 999;
+	@media (max-width: 768px) {
+		background: $light-white;
+		box-shadow: none;
+		overflow-y: auto;
+		height: 100vh;
+	}
+	.flex-holder {
+		@media (max-width: 768px) {
+			flex-wrap: wrap;
+		}
+		.left-box {
+			max-width: 270px;
+			margin-right: 40px;
+			flex-shrink: 0;
+		}
+		.gift-card-slider {
+			width: 100%;
+			position: relative;
+			.swiper-container {
+				padding: 30px 0;
+				width: 100%;
+				.swiper-slide {
+					.product-preview {
+						@media (max-width: 768px) {
+							margin: 0 auto;
+						}
+					}
+				}
+			}
+			.swiper-button-prev,
+			.swiper-button-next {
+				width: 20px;
+				height: 20px;
+				top: 50%;
+				transform: translateY(-50%);
+				left: -25px;
+				margin: 0 auto;
+				background: url(../images/icon_10_5.svg) no-repeat;
+				background-size: cover;
+				@media (max-width: 768px) {
+			    	top: 50% !important;
+			    	left: -10px;
+			    	right: auto;
+			    	transform: translateY(-50%);
+			    	width: 40px;
+			    	height: 40px;
+			    	border-radius: 50%;
+			    	background-size: 10px 10px !important;
+			    	background-position: center !important;
+			    	@include button-shadow;
+			    	background-color: $white !important;
+			    }
+			}
+			.swiper-button-next {
+				background: url(../images/icon_10_6.svg) no-repeat;
+				right: -20px;
+				left: auto;
+				@media (max-width: 768px) {
+					bottom: auto;
+					left: auto;
+					right: -10px;
+				}
+			}
+		}
+	}
+}
+
+.checkout-modal {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	transform: translateY(-50%);
+	max-width: 1360px;
+	width: 100%;
+	background: $white;
+	@include box-shadow;
+	z-index: 999;
+	@media (max-width: 768px) {
+		background: $light-white;
+		box-shadow: none;
+		height: 100vh;
+    	overflow: auto;
+	}
+	.flex-holder {
+		@media (max-width: 768px) {
+			flex-wrap: wrap;
+		}
+		.left-box {
+			max-width: 270px;
+			flex-shrink: 0;
+			margin-right: 40px;
+			@media (max-width: 768px) {
+				max-width: 100%;
+				margin: 0 auto 80px;
+				.w-270 {
+					max-width: 100%;
+					width: 100% !important;
+				}
+			}
+			p {
+				a {
+					color: $gold;
+				}
+			}
+		}
+		.gift-text {
+			max-width: 310px;
+			margin: 0 auto 40px;
+			align-items: center;
+			span {
+				flex-shrink: 0;
+			}
+			a {
+				color: $gold;
+			}
+		}
+		.products-holder {
+			padding-left: 40px;
+			border-left: 2px solid $grey;
+			@media (max-width: 768px) {
+				padding-left: 0;
+				border: 0;
+			}
+		}
+	}
+}
+
+.close-modal {
+	width: 20px;
+	height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $gold;
+    border-radius: 5px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    @media (max-width: 768px) {
+    	position: fixed;
+    	top: 20px;
+    	right: 20px;
+    }
+    img {
+    	width: 10px;
+    	height: 10px;
+    	position: absolute;
+    	top: 50%;
+    	transform: translateY(-50%);
+    	left: 0;
+    	right: 0;
+    	margin: 0 auto;
+    }
+}
+.fader {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 998;
+	background: $light-black;
+	@media (max-width: 768px) {
+		background: $light-white;
+	}
+}
