@@ -73,6 +73,9 @@
 			bottom: -100px;
 			left: 400px;
 			right: auto;
+			@media (max-width: 1400px) {
+				bottom: -200px;
+			}
 		}
 	}
 	.container {
@@ -139,15 +142,26 @@
 	p {
 		font-size: 20px;
 		line-height: 36px;
+		font-weight: bold;
 	}
 }
 
 .gift-block {
+	@media (max-width: 1400px) {
+	    background: url(../images/sert-bg.png) no-repeat;
+    	background-position: left -150px top -55px;
+    	background-size: contain;
+	}
 	@media (max-width: 768px) {
 		padding: 80px 40px 0;
+		background: none;
 	}
 	@media (max-width: 420px) {
 		padding: 0px 20px;
+	}
+	@media (min-width: 1600px) {
+	    background: url(../images/sert-bg.png) no-repeat;
+    	background-position: left -130px top -55px;
 	}
 	.container {
 		@media (max-width: 768px) {
@@ -202,22 +216,32 @@
 		}
 		.right-box {
 			img {
+				object-fit: cover;
 				@media (max-width: 768px) {
 					width: 100%;
 					margin: 0 auto 80px;
 				}
 			}
 		}
-
 	}
 }
 
 .brand-block {
+	@media (max-width: 1400px) {
+	    background: url(../images/brand-bg.png) no-repeat;
+    	background-position: right -80px top 0px;
+    	background-size: 30%;
+	}
 	@media (max-width: 768px) {
 		padding: 160px 40px 0;
+		background: none;
 	}
 	@media (max-width: 420px) {
 		padding: 80px 20px 0;
+	}
+	@media (min-width: 1600px) {
+	    background: url(../images/brand-bg.png) no-repeat;
+    	background-position: right -100px top -50px;
 	}
 	.container {
 		@media (max-width: 768px) {
@@ -394,7 +418,6 @@
 				}
 			}
 		}
-
 	}
 }
 
@@ -402,10 +425,10 @@
 	display: block;
 	width: 270px;
 	height: 460px;
-	box-shadow: 0 10px 20px 0 rgba(0,0,0,0.1);
+	box-shadow: 0 5px 10px 0 rgba(0,0,0,0.1);
 	transition: all 0.3s;
 	&:hover {
-		box-shadow: 0 10px 20px 0 rgba(0,0,0,0.4);
+		box-shadow: 0 5px 10px 0 rgba(0,0,0,0.4);
 	}
 	.image-holder {
 		position: relative;
@@ -470,9 +493,10 @@
 				max-width: 890px;
 				width: 100%;
 				position: relative;
+
 				.swiper-container {
-					padding: 0 10px;
-					height: 480px;
+					padding: 10px 10px;
+					height: 520px;
 					.swiper-slide {
 						.product-preview {
 							@media (max-width: 768px) {		
@@ -519,6 +543,20 @@
 		}
 	}
 }
+.top-sale {
+	@media (max-width: 1400px) {
+	    background: url(../images/top-bg.png) no-repeat;
+    	background-position: left -80px top 0px;
+    	background-size: 30%;
+	}
+	@media (max-width: 768px) {
+		background: none;
+	}
+	@media (min-width: 1600px) {
+	    background: url(../images/top-bg.png) no-repeat;
+    	background-position: left -120px top -90px;
+	}
+}
 
 .new-items {
 	padding-top: 145px;
@@ -532,11 +570,19 @@
 
 .contact-form {
 	padding-bottom: 142px;
+	@media (max-width: 1400px) {
+	    background: url(../images/contact-bg.png) right -120px top -90px no-repeat, url(../images/form-bg.png) left 150px top 200px no-repeat;
+    	background-size: 25%;
+	}
 	@media (max-width: 768px) {
 		padding: 204px 40px 80px;
+		background: none; 
 	}
 	@media (max-width: 420px) {
 		padding: 80px 20px 80px;
+	}
+	@media (min-width: 1600px) {
+	    background: url(../images/contact-bg.png) right -120px top -90px no-repeat, url(../images/form-bg.png) left 150px top 200px no-repeat;
 	}
 	.container {
 		@media (max-width: 768px) {
@@ -589,6 +635,9 @@
 			button {
 				font-size: 16px;
 				line-height: 24px;
+				outline: 0;
+				appearance: none;
+				border: 0; 
 			}
 		}
 		.right-box {
@@ -974,7 +1023,6 @@
 	}
 }
 .shop-wrapper {
-	
 	.filter-box {
 		width: 270px;
 		@include box-shadow;
@@ -1395,13 +1443,15 @@
 		box-shadow: none;
 		border: 0;
 		outline: 0;
-		appearance: none;
+		appearance: 0;
+		outline: none;
 		flex-shrink: 0;
 		justify-content: center;
 		align-items: center;
 		position: relative;
 		padding: 0;
 		background: $white;
+		cursor: pointer;
 		.minus {
 			width: 8px;
 			height: 1px;
@@ -1506,7 +1556,7 @@
 	.page-wrapper {
 		background: $light-white;
 		flex-wrap: wrap;
-		@media (max-width: 768px) {
+		@media (max-width: 1300px) {
 			flex-direction: column;
 		}
 		.left-box {
@@ -1514,21 +1564,21 @@
 			width: 100%;
 			padding-right: 40px;
 			border-right: 2px solid $grey;
-			@media (max-width: 768px) {
+			@media (max-width: 1300px) {
+				max-width: 100%;
 				padding-right: 0;
 				border: 0;
 			}
-			
 			.delivery-holder {
 				@include box-shadow;
 				background: $white;
-				@media (max-width: 768px) {
+				@media (max-width: 1366px) {
 					margin-bottom: 80px;
 				}
 				.tabs {
 					display: flex;
 					@include button-shadow;
-					@media (max-width: 768px) {
+					@media (max-width: 1300px) {
 						flex-wrap: wrap;
 					}
 					li {
@@ -1542,7 +1592,7 @@
 						&:nth-child(2) {
 							border-right: 1px solid $grey;
 							border-left: 1px solid $grey;
-							@media (max-width: 768px) {
+							@media (max-width: 1366px) {
 								border: 0;
 							}
 						}
@@ -1578,13 +1628,13 @@
 				  		align-items: flex-start;
 					}
 					&.image-spot {
-						@media (max-width: 768px) {
+						@media (max-width: 1200px) {
 							flex-wrap: wrap;
 						}
 						img {
 				  			max-width: 385px;
 				  			flex-shrink: 0;
-				  			@media (max-width: 768px) {
+				  			@media (max-width: 1200px) {
 				  				max-width: 100%;
 				  				width: 100%;
 				  				height: 280px;
@@ -1596,7 +1646,7 @@
 					.delivery-spots {
 						max-height: 310px;
 						overflow-y: auto;
-						@media (max-width: 768px) {
+						@media (max-width: 1300px) {
 							width: 100%;
 							padding-left: 0;
 							padding-right: 0;
@@ -1609,7 +1659,7 @@
 							height: 40px;
 						}
 						.choose-spot {
-							@media (max-width: 768px) {
+							@media (max-width: 1300px) {
 								display: flex !important;
 								margin: 0 auto;
 							}
@@ -1628,7 +1678,7 @@
 						appearance: none;
 					}
 					&.credit-holder {
-						@media (max-width: 768px) {
+						@media (max-width: 1300px) {
 							justify-content: center;
 						}
 						@media (max-width: 640px) {
@@ -1740,12 +1790,16 @@
 			background: $white;
 			position: relative;
 			top: 0;
-			@media (max-width: 768px) {
+			@media (max-width: 1300px) {
 				width: 100% !important;
 				margin: 0;
 			}
+			.theiaStickySidebar {
+				background: $white;
+				@include box-shadow;
+			}
 			.promocode {
-				@media (max-width: 768px) {
+				@media (max-width: 1300px) {
 					display: flex;
 					flex-wrap: wrap;
 					h2 {
@@ -1764,7 +1818,7 @@
 					line-height: 24px;
 					outline: 0;
 					appearance: none;
-					@media (max-width: 768px) {
+					@media (max-width: 1300px) {
 						width: 49%;
 						margin-right: 40px;
 					}
@@ -1775,7 +1829,7 @@
 				}
 				a {
 					width: 100%;
-					@media (max-width: 640px) {
+					@media (max-width: 1300px) {
 						max-width: 100%;
 					}
 				}
@@ -1794,7 +1848,7 @@
 				a {
 					color: $gold;
 				}
-				@media (max-width: 768px) {
+				@media (max-width: 1300px) {
 					left: 0;
 					right: 0;
 					max-width: 270px;
@@ -1805,7 +1859,7 @@
 		.download {
 			display: flex;
 			margin: 0 auto;
-			@media (max-width: 768px) {
+			@media (max-width: 1300px) {
 				max-width: 270px;
 				width: 100%;
 				height: 40px;
@@ -1867,6 +1921,7 @@
 			font-size: 20px;
 			line-height: 36px;
 			font-family: $headings-font-family;
+			flex-shrink: 0;
 			@media (max-width: 420px) {
 				font-size: 16px;
 				line-height: 26px;
@@ -1895,6 +1950,8 @@
 		position: absolute;
 		top: -10px;
 		right: -10px;
+		opacity: 0;
+		visibility: hidden;
 		img {
 			width: 10px;
 			height: 10px;
@@ -1911,6 +1968,12 @@
 		}
 		@media (max-width: 420px) {
 			right: -10px;
+		}
+	}
+	&:hover {
+		.close-product {
+			opacity: 1;
+			visibility: visible;
 		}
 	}
 }

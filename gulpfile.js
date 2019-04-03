@@ -31,7 +31,10 @@ gulp.task('styles', function() {
 });
 
 gulp.task('scripts', function() {
-  return gulp.src(['./src/javascripts/**/*.js'])
+  return gulp.src(
+    [
+      './src/javascripts/**/*.js'
+    ])
     .pipe(plumber())
     .pipe(concat('main.js'))
     .pipe(gulp.dest('public/js'))

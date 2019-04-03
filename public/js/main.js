@@ -70,6 +70,9 @@ function initPage() {
         $('.fader').hide();
     });
     
+    $('.close-product').click(function() {
+        $(this).parent().remove();
+    })
     
     var mySwiper = new Swiper ('.brand-slider .swiper-container', {
         direction: 'vertical',
@@ -254,15 +257,44 @@ function initPage() {
 $(window).scroll(function(){
     var ws = $(window).scrollTop();
     $('#img_1').css({
-        'transform': 'translate(0px, -'+ ws / 1.2 +'px)'
+        'transform': 'translate(0px, -'+ ws / 5 +'px)'
     });
     $('#img_2').css({
-        'transform': 'translate(0px,  -'+ ws / 2.5 +'px)'
+        'transform': 'translate(0px,  -'+ ws / 6.5 +'px)'
     });
     $('#img_3,#img_4,#img_5,#img_6').css({
-        'transform': 'translate(0px, -'+ ws / 3 +'px)'
+        'transform': 'translate(0px, -'+ ws / 7.5 +'px)'
     });
     $('#mob_image').css({
         'transform': 'translate(0px, -'+ ws / 8 +'px)'
     });
+});
+
+$('.checkout .right-box').theiaStickySidebar({
+
+  // container element
+  'containerSelector': '.checkout .left-box',
+
+  // top/bottom margiin in pixels
+  'additionalMarginTop': 120,
+  'additionalMarginBottom': 0,
+
+  // auto up<a href="https://www.jqueryscript.net/time-clock/">date</a> height on window resize
+  'updateSidebarHeight': false,
+
+  // disable the plugin when the screen size is smaller than...
+  'minWidth': 768,
+
+  // disable the plugin on responsive layouts
+  'disableOn<a href="https://www.jqueryscript.net/tags.php?/Responsive/">Responsive</a>Layouts': true,
+
+  // or 'stick-to-top', 'stick-to-bottom'
+  'sidebarBehavior': 'modern',
+
+  // or 'absolute'
+  'defaultPosition': 'relative',
+
+  // namespace
+  'namespace': 'TSS'
+  
 });

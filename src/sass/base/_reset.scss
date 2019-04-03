@@ -58,6 +58,17 @@ input:focus::-moz-placeholder,
 textarea:focus::-moz-placeholder {font-size: 0;}
 input:focus::-ms-placeholder,
 textarea:focus::-ms-placeholder {font-size: 0;}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; 
+}
+
+input[type=number] {
+    -moz-appearance:textfield; 
+}
+
 .show {
 	&.fader {
 		display: block;	

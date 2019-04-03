@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "gulp": "^3.9.1",
-    "paroller.js": "^1.4.6"
+    "paroller.js": "^1.4.6",
+    "theia-sticky-sidebar": "^1.7.0"
   }
 }
