@@ -152,7 +152,6 @@ function initPage() {
         }
     })
 
-
     var mySwiper = new Swiper ('.new-slider .swiper-container', {
         slidesPerView: 3,
         spaceBetween: 20,
@@ -203,9 +202,6 @@ function initPage() {
         }
     })
 
-    
-    
-    
     $('.add').click(function () {
         if ($(this).prev().val() < 99) {
         $(this).prev().val(+$(this).prev().val() + 1);
