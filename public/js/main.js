@@ -265,32 +265,32 @@ $(window).scroll(function(){
         'transform': 'translate(0px, -'+ ws / 8 +'px)'
     });
 });
+if($('body .checkout').length) {
+    $('.checkout .right-box').theiaStickySidebar({
 
-$('.checkout .right-box').theiaStickySidebar({
+      // container element
+      'containerSelector': '.checkout .left-box',
 
-  // container element
-  'containerSelector': '.checkout .left-box',
+      // top/bottom margiin in pixels
+      'additionalMarginTop': 120,
+      'additionalMarginBottom': 0,
 
-  // top/bottom margiin in pixels
-  'additionalMarginTop': 120,
-  'additionalMarginBottom': 0,
+      // auto up<a href="https://www.jqueryscript.net/time-clock/">date</a> height on window resize
+      'updateSidebarHeight': false,
 
-  // auto up<a href="https://www.jqueryscript.net/time-clock/">date</a> height on window resize
-  'updateSidebarHeight': false,
+      // disable the plugin when the screen size is smaller than...
+      'minWidth': 768,
 
-  // disable the plugin when the screen size is smaller than...
-  'minWidth': 768,
+      // disable the plugin on responsive layouts
+      'disableOn<a href="https://www.jqueryscript.net/tags.php?/Responsive/">Responsive</a>Layouts': true,
 
-  // disable the plugin on responsive layouts
-  'disableOn<a href="https://www.jqueryscript.net/tags.php?/Responsive/">Responsive</a>Layouts': true,
+      // or 'stick-to-top', 'stick-to-bottom'
+      'sidebarBehavior': 'modern',
 
-  // or 'stick-to-top', 'stick-to-bottom'
-  'sidebarBehavior': 'modern',
+      // or 'absolute'
+      'defaultPosition': 'relative',
 
-  // or 'absolute'
-  'defaultPosition': 'relative',
-
-  // namespace
-  'namespace': 'TSS'
-  
-});
+      // namespace
+      'namespace': 'TSS'
+    });
+};
